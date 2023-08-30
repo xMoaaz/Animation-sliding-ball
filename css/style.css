@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: #111;
+    background-image: url(../images/animation-bg.jpg);
+    background-size: cover;
+}
+
+@font-face{
+    font-family: myfont;
+    src: url(/font.ttf);
+}
+.title{
+    /* background-color: #fff; */
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 33%;
+    font-style: italic;
+    color: #FFFFFF;
+    transition: 1s;
+
+    animation-name: title;
+    animation-duration: 5.5s;
+    animation-delay: 0.5s;
+    animation-play-state: forwads;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.enjoy{
+    position: absolute;
+    top: 190px;
+    left: 42%;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    font-style: italic;
+    color: #FFFFFF;
+    transition: 0.6s;
+    font-family: myfont;
+
+    animation-name: enjoy;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-play-state: forwads;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes title{
+    0%{
+        opacity: 0;
+    }
+
+    20%{
+        display: block;
+        opacity: 1;
+        color: crimson;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes enjoy{
+    0%{
+        opacity: 0;
+        top: 250px;
+    }
+
+    20%{
+        top: 190px;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        color: crimson;
+
+    }
+}
+/* Animation: name duration timing-function delay iteration-count direction Fill-mode play-state*/
+.all{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #f9f2fd;
+    position: absolute;
+}
+
+.figure1{top: 30px; animation-delay: 5s}
+.figure2{top: 145px; animation-delay: 7s}
+.figure3{top: 260px; animation-delay: 9s}
+.figure4{top: 377px; animation-delay: 11s}
+.figure5{top: 490px; animation-delay: 13s}
+.figure6{top: 605px; animation-delay: 15s}
+
+.opp{margin-left: 1410px;}
+
+.norm{
+    animation-name: norm;
+    animation-duration: 2s;
+    position: absolute;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+@keyframes norm{
+    0%{
+        left: 0;
+    }
+
+    40%{
+        width: 190px;
+        height: 60px;
+    }
+
+    100%{
+        left: 1400px;
+        background-color: crimson;
+        width: 120px;
+    }
+}
+
+.opp{
+    animation-name: opp;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes opp{
+    0%{
+        left: 0;
+    }
+
+    40%{
+        width: 190px;
+        height: 60px;
+    }
+
+    100%{
+        left: -1400px;
+        background-color: crimson;
+    }
+}
